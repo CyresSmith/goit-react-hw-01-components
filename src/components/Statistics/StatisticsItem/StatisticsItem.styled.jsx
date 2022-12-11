@@ -1,21 +1,21 @@
 import styled from '@emotion/styled';
+import { getRandomHexColor } from '../../getRandomHexColor';
 
 export const Item = styled.li`
-  width: calc(100% / 3);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px;
+  padding: 10px 30px;
+  background-color: ${getRandomHexColor};
 `;
 
 export const Label = styled.span`
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
-  color: grey;
 `;
 
 export const Percentage = styled.span`
   margin-top: 5px;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 23px;
+  font-weight: 400;
 `;

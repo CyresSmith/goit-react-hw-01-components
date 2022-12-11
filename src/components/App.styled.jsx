@@ -8,7 +8,7 @@ export const Container = styled.div`
   padding-right: var(--card-set-gap);
 `;
 
-export const Section = styled.section`
+export const Section = styled.div`
   padding-top: 60px;
   padding-bottom: 60px;
   display: flex;

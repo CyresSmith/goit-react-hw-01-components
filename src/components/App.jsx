@@ -1,6 +1,8 @@
-import { Profile } from './Profile/Profile';
-import { StatisticsSection } from './Statistics/Statistics';
 import users from '../incomingData/users.json';
+import stats from '../incomingData/data.json';
+
+import { Profile } from './Profile/Profile';
+import { StatisticsSection } from './Statistics/StatisticsSection/StatisticsSection';
 import { Container, Section } from './App.styled';
 
 export const App = () => {
@@ -18,7 +20,7 @@ export const App = () => {
           />
         ))}
       </Section>
-      <StatisticsSection />
+      <StatisticsSection title="Upload stats" stats={stats} />
     </Container>
   );
 };
