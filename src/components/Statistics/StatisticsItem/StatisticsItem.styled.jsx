@@ -5,7 +5,8 @@ export const Item = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 10px 30px;
+  padding: 10px;
+  width: 112px;
   background-color: ${getRandomHexColor};
 `;
 

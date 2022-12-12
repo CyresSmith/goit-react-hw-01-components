@@ -1,26 +1,36 @@
 import users from '../incomingData/users.json';
 import stats from '../incomingData/data.json';
+import friends from '../incomingData/friends.json';
+import transactions from '../incomingData/transactions.json';
 
+import { Container, Section } from './App.styled';
 import { Profile } from './Profile/Profile';
 import { StatisticsSection } from './Statistics/StatisticsSection/StatisticsSection';
-import { Container, Section } from './App.styled';
+import { FriendList } from './FriendList/FriendList';
+import { TransactionHistory } from './TransactionHistory/TransactionHistory';
 
 export const App = () => {
   return (
     <Container>
       <Section>
-        {users.map(user => (
+        {users.map(({ username, tag, location, avatar, stats }) => (
           <Profile
-            key={user.username}
-            username={user.username}
-            tag={user.tag}
-            location={user.location}
-            avatar={user.avatar}
-            stats={user.stats}
+            key={username}
+            username={username}
+            tag={tag}
+            location={location}
+            avatar={avatar}
+            stats={stats}
           />
         ))}
       </Section>
       <StatisticsSection title="Upload stats" stats={stats} />
+      <Section>
+        <FriendList friends={friends} />
+      </Section>
+      <Section>
+        <TransactionHistory items={transactions} />
+      </Section>
     </Container>
   );
 };

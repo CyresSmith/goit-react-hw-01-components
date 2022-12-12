@@ -25,7 +25,6 @@ export const Title = styled.h2`
 
 export const StatList = styled.ul`
   display: flex;
-  flex-wrap: wrap;
   flex-basis: 100%;
   height: 75px;
 `;

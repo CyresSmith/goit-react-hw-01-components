@@ -7,12 +7,8 @@ export const StatisticsSection = ({ title, stats }) => {
     <Statistics>
       {title && <Title>{title}</Title>}
       <StatList>
-        {stats.map(item => (
-          <StatisticsItem
-            key={item.id}
-            label={item.label}
-            percentage={item.percentage}
-          />
+        {stats.map(({ id, label, percentage }) => (
+          <StatisticsItem key={id} label={label} percentage={percentage} />
         ))}
       </StatList>
     </Statistics>
@@ -21,5 +17,11 @@ export const StatisticsSection = ({ title, stats }) => {
 
 StatisticsSection.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.array,
+  stats: PropTypes.arrayOf(
+    PropTypes.exact({
+      id: PropTypes.string,
+      label: PropTypes.string,
+      percentage: PropTypes.number,
+    })
+  ).isRequired,
 };
