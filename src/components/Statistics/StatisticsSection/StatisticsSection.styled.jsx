@@ -1,30 +1,28 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const Statistics = styled.section`
   display: inline-block;
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
-  border-radius: 10px;
+  background-color: ${p => p.theme.colors.primary};
+  border-radius: ${p => p.theme.radii.normal};
   overflow: hidden;
-  box-shadow: 0px 0.7px 0.7px hsl(var(--shadow-color) / 0.41),
-    -0.1px 2.1px 2.2px -1px hsl(var(--shadow-color) / 0.38),
-    -0.3px 5.5px 5.9px -1.9px hsl(var(--shadow-color) / 0.35),
-    -0.8px 13.7px 14.6px -2.9px hsl(var(--shadow-color) / 0.32);
+  box-shadow: ${p => p.theme.shadow.medium};
 `;
 
 export const Title = styled.h2`
   text-align: center;
   text-transform: uppercase;
-  font-size: 23px;
-  font-weight: 400;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  color: gray;
+  font-size: ${p => p.theme.fontSizes.xl};
+  font-weight: ${p => p.theme.fontWeights.regular};
+  color: ${p => p.theme.colors.secondary};
+  margin-top: ${p => p.theme.space[5]};
+  margin-bottom: ${p => p.theme.space[5]};
 `;
 
 export const StatList = styled.ul`
   display: flex;
   flex-basis: 100%;
-  height: 75px;
+  border-top: ${p => p.theme.borders.normal};
+  border-color: ${p => p.theme.colors.background};
 `;

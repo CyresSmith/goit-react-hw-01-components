@@ -10,7 +10,7 @@
   --container-width: 1200px;
   --card-set-gap: 40px;
   --card-width: calc(($container-width - ($card-set-gap * 5)) / 4);
-  --shadow-color: 0deg 0% 62%;
+  --shadow-color: #9e9e9e;
 }
 
 *,
@@ -48,7 +48,7 @@ img {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: #8e9095;
 }
 
 body {

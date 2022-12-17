@@ -1,51 +1,56 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const TransactionHistoryTable = styled.table`
   width: 600px;
-  border: none;
+  border: ${p => p.theme.borders.none};
   margin-left: auto;
   margin-right: auto;
-  background: white;
-  border-radius: 13px;
-  box-shadow: 0px 0.7px 0.7px hsl(var(--shadow-color) / 0.41),
-    -0.1px 2.1px 2.2px -1px hsl(var(--shadow-color) / 0.38),
-    -0.3px 5.5px 5.9px -1.9px hsl(var(--shadow-color) / 0.35),
-    -0.8px 13.7px 14.6px -2.9px hsl(var(--shadow-color) / 0.32);
+  background: ${p => p.theme.colors.primary};
+  border-radius: ${p => {
+    return parseInt(p.theme.radii.normal) + 2;
+  }}px;
+  box-shadow: ${p => p.theme.shadow.medium};
 
   thead th {
-    font-weight: bold;
+    font-size: ${p => p.theme.fontSizes.m};
+    font-weight: ${p => p.theme.fontWeights.regular};
+    color: ${p => p.theme.colors.accent};
     text-align: center;
-    border: none;
-    padding: 10px 15px;
-    background: lightblue;
-    font-size: 14px;
+    border: ${p => p.theme.borders.none};
+    padding: ${p => p.theme.space[3]} ${p => p.theme.space[5]};
+    background: ${p => p.theme.colors.secondary};
   }
 
   thead tr th:first-of-type {
-    border-radius: 10px 0 0 10px;
+    border-radius: ${p => p.theme.radii.normal} ${p => p.theme.radii.none}
+      ${p => p.theme.radii.none} ${p => p.theme.radii.normal};
   }
 
   thead tr th:last-of-type {
-    border-radius: 0 10px 10px 0;
+    border-radius: ${p => p.theme.radii.none} ${p => p.theme.radii.normal}
+      ${p => p.theme.radii.normal} ${p => p.theme.radii.none};
   }
 
   tbody td {
+    font-size: ${p => p.theme.fontSizes.m};
+    font-weight: ${p => p.theme.fontWeights.light};
     text-align: center;
-    border: none;
-    padding: 10px 15px;
-    font-size: 14px;
+    border: ${p => p.theme.borders.none};
+    padding: ${p => p.theme.space[3]} ${p => p.theme.space[5]};
     vertical-align: top;
   }
 
   tbody tr:nth-of-type(even) {
-    background: whitesmoke;
+    background: ${p => p.theme.colors.background};
   }
 
   tbody tr td:first-of-type {
-    border-radius: 10px 0 0 10px;
+    border-radius: ${p => p.theme.radii.normal} ${p => p.theme.radii.none}
+      ${p => p.theme.radii.none} ${p => p.theme.radii.normal};
   }
 
   tbody tr td:last-of-type {
-    border-radius: 0 10px 10px 0;
+    border-radius: ${p => p.theme.radii.none} ${p => p.theme.radii.normal}
+      ${p => p.theme.radii.normal} ${p => p.theme.radii.none};
   }
 `;

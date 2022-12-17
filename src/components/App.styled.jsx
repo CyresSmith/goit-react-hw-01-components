@@ -1,16 +1,16 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const Container = styled.div`
-  width: var(--container-width);
+  width: ${p => p.theme.sizes.conrtainer};
   margin-left: auto;
   margin-right: auto;
-  padding-left: var(--card-set-gap);
-  padding-right: var(--card-set-gap);
+  padding-left: ${p => p.theme.space[5]};
+  padding-right: ${p => p.theme.space[5]};
 `;
 
-export const Section = styled.div`
-  padding-top: 60px;
-  padding-bottom: 60px;
+export const Section = styled.section`
+  padding-top: ${p => p.theme.space[6]};
+  padding-bottom: ${p => p.theme.space[6]};
   display: flex;
   justify-content: space-between;
 `;

@@ -1,95 +1,89 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const ProfileCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 400px;
   width: 300px;
-  background-color: white;
-  border-radius: 10px;
+  background-color: ${p => p.theme.colors.primary};
+  border-radius: ${p => p.theme.radii.normal};
   overflow: hidden;
-  box-shadow: 0px 0.7px 0.7px hsl(var(--shadow-color) / 0.41),
-    -0.1px 2.1px 2.2px -1px hsl(var(--shadow-color) / 0.38),
-    -0.3px 5.5px 5.9px -1.9px hsl(var(--shadow-color) / 0.35),
-    -0.8px 13.7px 14.6px -2.9px hsl(var(--shadow-color) / 0.32);
+  box-shadow: ${p => p.theme.shadow.medium};
 `;
 
 export const Description = styled.div`
-  height: 325px;
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px;
+  padding: ${p => p.theme.space[5]};
 `;
 
 export const Avatar = styled.img`
   height: 140px;
-  width: auto;
   object-fit: cover;
-  background-color: whitesmoke;
-  border-radius: 50%;
+  background-color: ${p => p.theme.colors.background};
+  border-radius: ${p => p.theme.radii.round};
 `;
 
 export const Name = styled.p`
   display: flex;
   align-items: center;
-  font-size: 23px;
-  height: 35px;
-  font-weight: 500;
-  margin-top: 20px;
+  font-size: ${p => p.theme.fontSizes.xl};
+  font-weight: ${p => p.theme.fontWeights.regular};
+  color: ${p => p.theme.colors.secondary};
+  margin-top: ${p => p.theme.space[5]};
 `;
 
 export const Tag = styled.p`
   display: flex;
   align-items: center;
-  height: 20px;
-  font-size: 17px;
-  font-weight: 400;
-  margin-top: 15px;
-  color: grey;
+  font-size: ${p => p.theme.fontSizes.m};
+  font-weight: ${p => p.theme.fontWeights.light};
+  margin-top: ${p => p.theme.space[4]};
+  color: ${p => p.theme.colors.secondary};
 `;
 
 export const Location = styled.p`
   display: flex;
   align-items: center;
-  height: 20px;
-  font-size: 17px;
-  font-weight: 400;
-  margin-top: 15px;
-  color: grey;
+  font-size: ${p => p.theme.fontSizes.m};
+  font-weight: ${p => p.theme.fontWeights.light};
+  margin-top: ${p => p.theme.space[4]};
+  color: ${p => p.theme.colors.secondary};
 `;
 
 export const Stats = styled.ul`
   display: flex;
   width: 100%;
-  height: 75px;
-  background-color: whitesmoke;
-  border-top: 1px solid rgb(233, 231, 231);
+  background-color: ${p => p.theme.colors.secondary};
+  border-top: ${p => p.theme.borders.normal};
+  border-color: ${p => p.theme.colors.background};
 
   li {
     width: calc(100% / 3);
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 10px;
-  }
+    padding-top: ${p => p.theme.space[4]};
+    padding-bottom: ${p => p.theme.space[4]};
 
-  li:nth-of-type(2) {
-    border-left: 1px solid rgb(233, 231, 231);
-    border-right: 1px solid rgb(233, 231, 231);
+    :not(:last-child) {
+      border-right: ${p => p.theme.borders.normal};
+      border-color: ${p => p.theme.colors.background};
+    }
   }
 `;
 
 export const Label = styled.span`
-  font-size: 13px;
-  font-weight: 400;
-  color: grey;
+  font-size: ${p => p.theme.fontSizes.s};
+  font-weight: ${p => p.theme.fontWeights.light};
+  color: ${p => p.theme.colors.accent};
 `;
 
 export const Quantity = styled.span`
-  margin-top: 5px;
-  font-size: 18px;
-  font-weight: 500;
+  margin-top: ${p => p.theme.space[3]};
+  font-size: ${p => p.theme.fontSizes.m};
+  font-weight: ${p => p.theme.fontWeights.regular};
+  color: ${p => p.theme.colors.accent};
 `;

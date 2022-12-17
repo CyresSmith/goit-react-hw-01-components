@@ -1,30 +1,25 @@
-import styled from '@emotion/styled';
+import styled from 'styled-components';
 
 export const Item = styled.li`
   position: relative;
   display: flex;
   align-items: center;
   width: 300px;
-  height: 90px;
-  padding: 20px 0;
-  background-color: white;
-  border-radius: 10px;
+  background-color: ${p => p.theme.colors.primary};
+  border-radius: ${p => p.theme.radii.normal};
   overflow: hidden;
-  box-shadow: 0px 0.7px 0.7px hsl(var(--shadow-color) / 0.41),
-    -0.1px 2.1px 2.2px -1px hsl(var(--shadow-color) / 0.38),
-    -0.3px 5.5px 5.9px -1.9px hsl(var(--shadow-color) / 0.35),
-    -0.8px 13.7px 14.6px -2.9px hsl(var(--shadow-color) / 0.32);
+  box-shadow: ${p => p.theme.shadow.medium};
 
   :not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: ${p => p.theme.space[5]};
   }
 `;
 
 export const Status = styled.span`
   position: absolute;
-  right: 0px;
-  width: 15px;
-  height: 90px;
+  right: ${p => p.theme.space[0]};
+  width: ${p => p.theme.space[4]};
+  height: 100%;
   background-color: ${({ isOnline }) => {
     if (isOnline) {
       return '#17e610';
@@ -34,15 +29,20 @@ export const Status = styled.span`
 `;
 
 export const Avatar = styled.img`
-  height: 90px;
+  height: 100%;
   width: 90px;
   object-fit: cover;
   overflow: hidden;
-  background-color: whitesmoke;
+  background-color: ${p => p.theme.colors.secondary};
+  border-right: ${p => p.theme.borders.normal};
+  border-color: ${p => p.theme.colors.background};
 `;
 
 export const Name = styled.p`
-  font-size: 23px;
-  font-weight: 500;
-  margin-left: 15px;
+  font-size: ${p => p.theme.fontSizes.xl};
+  font-weight: ${p => p.theme.fontWeights.regular};
+  color: ${p => p.theme.colors.secondary};
+  margin-left: ${p => p.theme.space[4]};
+  margin-top: ${p => p.theme.space[5]};
+  margin-bottom: ${p => p.theme.space[5]};
 `;
