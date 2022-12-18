@@ -1,6 +1,44 @@
 import styled from 'styled-components';
-import { color } from 'styled-system';
+import {
+  color,
+  typography,
+  space,
+  layout,
+  flexbox,
+  grid,
+  background,
+  border,
+  position,
+  shadow,
+  variant,
+} from 'styled-system';
 
-export const Box = styled.div`
-  ${color}
-`;
+export const Box = styled('div')(
+  color,
+  typography,
+  space,
+  layout,
+  flexbox,
+  grid,
+  background,
+  border,
+  position,
+  shadow,
+  variant({
+    variants: {
+      container: {
+        width: 'container',
+        ml: 'auto',
+        mr: 'auto',
+        pl: [5],
+        pr: [5],
+      },
+
+      section: {
+        pt: [6],
+        pb: [6],
+        display: 'flex',
+      },
+    },
+  })
+);

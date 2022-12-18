@@ -4,11 +4,12 @@ import { getRandomHexColor } from '../../getRandomHexColor';
 export const Item = styled.li`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   padding-top: ${p => p.theme.space[4]};
   padding-bottom: ${p => p.theme.space[4]};
-  width: 112px;
+  width: 113.6px;
   background-color: ${p => p.theme.colors.secondary};
+  /* background-color: ${getRandomHexColor}; */
 
   :not(:last-child) {
     border-right: ${p => p.theme.borders.normal};

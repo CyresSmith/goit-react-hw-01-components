@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 
 export const Statistics = styled.section`
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  width: ${p => p.widthFactor * 113.6}px;
   margin-left: auto;
   margin-right: auto;
   background-color: ${p => p.theme.colors.primary};

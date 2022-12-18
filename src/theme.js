@@ -1,14 +1,14 @@
-const shadowColor = '221deg 3% 62%';
+const shadowColor = '210deg 24% 41%';
 
 export const theme = {
   colors: {
     white: '#fff',
     text: '#000',
-    background: '#E9EAEC',
-    primary: '#90ADC6',
+    background: '#90ADC6',
+    primary: '#E9EAEC',
     secondary: '#333652',
     accent: '#FAD02C',
-    muted: '#f6f6f6',
+    muted: '#489fb5',
   },
 
   fonts: {
@@ -51,7 +51,7 @@ export const theme = {
   },
 
   sizes: {
-    conrtainer: '1200px',
+    container: '1200px',
   },
 
   shadow: {

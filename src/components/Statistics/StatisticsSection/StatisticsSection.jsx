@@ -3,8 +3,9 @@ import { Statistics, Title, StatList } from './StatisticsSection.styled';
 import { StatisticsItem } from '../StatisticsItem/StatisticsItem';
 
 export const StatisticsSection = ({ title, stats }) => {
+  const widthFactor = stats.length;
   return (
-    <Statistics>
+    <Statistics widthFactor={widthFactor}>
       {title && <Title>{title}</Title>}
       <StatList>
         {stats.map(({ id, label, percentage }) => (

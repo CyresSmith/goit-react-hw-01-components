@@ -64,7 +64,7 @@ export const Stats = styled.ul`
     width: calc(100% / 3);
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
     padding-top: ${p => p.theme.space[4]};
     padding-bottom: ${p => p.theme.space[4]};
 

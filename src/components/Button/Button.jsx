@@ -1,6 +1,4 @@
-import { PropTypes } from 'prop-types';
-
-import { StyledButton } from './Button.styled';
+import { StyledButton, ButtonText } from './Button.styled';
 
 export const Button = ({
   icon: Icon = null,
@@ -12,7 +10,7 @@ export const Button = ({
   return (
     <StyledButton type={type} disabled={disabled}>
       {Icon && <Icon size={iconSize} />}
-      {children}
+      <ButtonText isIconThere={Icon}>{children}</ButtonText>
     </StyledButton>
   );
 };
